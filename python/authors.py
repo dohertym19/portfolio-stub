@@ -4,5 +4,5 @@ authors = {
 "Anthony Trollope, 1882"
 "Gerard Manley Hopkins, 1889"
 }
-def add (author):
-    print(name, date in
+for author, date in authors.items():
+    print(author + " kicked the bucket in " + date)
