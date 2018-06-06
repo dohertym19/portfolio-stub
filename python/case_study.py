@@ -22,7 +22,6 @@ with open('csvs/practice.csv', 'w') as fout:
 with open('csvs/practice.csv', 'r') as fin:
     our_reader = csv.reader(fin)
     data = [row for row in our_reader]
-print(data)
 
 data[3][3] = 'Ethan'
 data[4][2] = 'Brandon'
@@ -33,4 +32,11 @@ with open('csvs/practice.csv', 'w') as fout:
     for row in data:
         csvwriter.writerow(row)
 
-print(data)
+
+groceries = []
+with open('csvs/shopping.csv', 'r') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        groceries.append(row)
+
+print(groceries)
